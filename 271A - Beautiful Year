@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h> 
+ 
+using namespace std;
+int main()
+{
+    int n,k;k=1;
+    cin >> n;
+    string s;
+    while(k!=0)
+    {   
+        n= n+1;
+        int t=1;
+        s = to_string(n);
+        for (int i = 0; i < s.length() - 1; i++) 
+        { 
+            for (int j = i + 1; j < s.length(); j++) 
+            { 
+                if (s[i] == s[j])
+                t = 0;
+            }
+        }
+    if(t)
+    break;
+    
+    }
+    cout << s <<endl;
+    return 0;
+}
