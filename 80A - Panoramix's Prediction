@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n,m;
+    int i,j,nxt_prime,test;
+    cin>>n>>m;
+    for(i=n+1;i<=m;i++)
+    {   
+        test =1;
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0)
+            test = 0;
+        }
+        if(test==1){
+            nxt_prime = i;
+            break;
+        }
+    }
+    if(nxt_prime == m)
+    cout<<"YES";
+    else
+    cout<<"NO";
+}
